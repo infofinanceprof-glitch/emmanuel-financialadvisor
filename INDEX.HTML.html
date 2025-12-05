@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Leadway Assurance - Financial Advisor</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- HERO SECTION -->
+<header class="bg-blue-700 text-white py-20 text-center shadow-xl">
+  <h1 class="text-4xl font-bold">Secure Your Future With Leadway Assurance</h1>
+  <p class="mt-4 text-xl">Financial Protection • Smart Savings • Guaranteed Benefits</p>
+  <a href="#products" class="mt-6 inline-block bg-white text-blue-700 px-6 py-3 rounded-full font-semibold shadow-md">Explore Plans</a>
+</header>
+
+<!-- ABOUT SECTION -->
+<section class="py-16 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-6">Meet Your Financial Advisor</h2>
+  <p class="text-lg text-center leading-relaxed">
+    I'm <strong>Omoniyi Oluwatobiloba Emmanuel</strong>, a certified Financial Advisor with Leadway Assurance.
+    I help individuals, parents, business owners, and professionals secure their financial future with proven
+    insurance-backed solutions.
+  </p>
+</section>
+
+<!-- PRODUCT SECTION -->
+<section id="products" class="bg-white py-20 px-6">
+  <h2 class="text-3xl font-bold text-center mb-10">Our Top Financial Plans</h2>
+  
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <!-- LTP CARD -->
+    <div class="bg-gray-100 p-6 rounded-xl shadow-lg">
+      <h3 class="text-2xl font-bold mb-3">Leadway Target Plan (LTP)</h3>
+      <p class="leading-relaxed mb-4">A long-term savings + life protection plan that guarantees your target amount
+      whether you complete your savings or not.</p>
+      <ul class="list-disc ml-5 mb-4">
+        <li>Guaranteed payout</li>
+        <li>Life protection</li>
+        <li>Wealth accumulation</li>
+      </ul>
+      <a href="#contact" class="text-blue-700 font-semibold">Get Started →</a>
+    </div>
+
+    <!-- ETP CARD -->
+    <div class="bg-gray-100 p-6 rounded-xl shadow-lg">
+      <h3 class="text-2xl font-bold mb-3">Education Target Plan (ETP)</h3>
+      <p class="leading-relaxed mb-4">A structured plan that guarantees your child's university education—no matter what happens.</p>
+      <ul class="list-disc ml-5 mb-4">
+        <li>Full payout on death/disability</li>
+        <li>Flexible premium options</li>
+        <li>Long-term education security</li>
+      </ul>
+      <a href="#contact" class="text-blue-700 font-semibold">Secure Child's Future →</a>
+    </div>
+
+    <!-- ETPP CARD -->
+    <div class="bg-gray-100 p-6 rounded-xl shadow-lg">
+      <h3 class="text-2xl font-bold mb-3">Education Target Plan Plus (ETPP)</h3>
+      <p class="leading-relaxed mb-4">Covers education from primary to tertiary with the option of partial withdrawals.</p>
+      <ul class="list-disc ml-5 mb-4">
+        <li>Withdrawal allowed every 3–6 years</li>
+        <li>Full target paid on death</li>
+        <li>Flexible long-term security</li>
+      </ul>
+      <a href="#contact" class="text-blue-700 font-semibold">Explore ETPP →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact" class="py-20 px-6 bg-blue-50">
+  <h2 class="text-3xl font-bold text-center mb-8">Speak With Me</h2>
+  <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <form onsubmit="sendWhatsApp(event)">
+      <label class="block mb-3 font-semibold">Full Name</label>
+      <input id="name" class="w-full p-3 border rounded mb-5" required>
+
+      <label class="block mb-3 font-semibold">Plan Interested In</label>
+      <select id="plan" class="w-full p-3 border rounded mb-5">
+        <option>LTP</option>
+        <option>ETP</option>
+        <option>ETPP</option>
+      </select>
+
+      <label class="block mb-3 font-semibold">Phone Number</label>
+      <input id="phone" class="w-full p-3 border rounded mb-5" required>
+
+      <button class="w-full bg-blue-700 text-white py-3 rounded-lg font-bold">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-blue-900 text-white text-center py-6 mt-10">
+  <p>Leadway Assurance | Financial Advisor – Omoniyi Oluwatobiloba Emmanuel</p>
+  <p>📞 08165229268</p>
+</footer>
+
+<script>
+function sendWhatsApp(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const plan = document.getElementById('plan').value;
+  const phone = document.getElementById('phone').value;
+
+  const msg = `Hello Emmanuel, my name is ${name}. I am interested in the ${plan}. My number is ${phone}.`;
+  window.open(`https://wa.me/2348165229268?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
+</body>
+</html>
